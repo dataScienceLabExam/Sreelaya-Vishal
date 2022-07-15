@@ -1,0 +1,29 @@
+package externalexam;
+import java.io.*;
+import java.util.*;
+
+
+public class file {
+	public static void main(String args[]){
+		try{
+			FileWriter fw= new FileWriter("C:\\Users\\Admin\\Desktop\\mca\\sree",true);
+			fw.write("\nhello world\n");
+			fw.close();
+			FileReader reader= new FileReader ("C:\\Users\\Admin\\Desktop\\mca\\sree");
+			BufferedReader b= new BufferedReader(reader);
+			String line;
+			System.out.println("\n data read from file \n");
+			while((line=b.readLine())!=null){
+				System.out.println(line);
+			}
+		    reader.close();
+		   
+	}
+	catch(IOException e){
+		System.out.println("\n error occured...");
+	}
+			
+			
+    }	
+	
+}
